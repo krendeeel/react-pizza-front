@@ -26,10 +26,6 @@ body {
 
 .content {
   padding: 40px 0;
-
-  @media (max-width: 768px) {
-    min-height: calc(100vh - 100px);
-  }
   &__title {
     margin: 35px 0;
     @media (max-width: 768px) {
@@ -554,7 +550,6 @@ body {
         padding: 16px;
 
         @media (max-width: 500px) {
-          margin-top: 15px;
           order: 1;
         }
       }
