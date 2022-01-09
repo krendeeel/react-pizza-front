@@ -1,0 +1,82 @@
+@import "../variables";
+
+.categories {
+  flex: 1;
+  max-width: 80%;
+  overflow: auto;
+  font-size: 16px;
+
+  @media (max-width: 890px) {
+    font-size: 14px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    display: flex;
+    @media (max-width: 1280px) {
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      @include noselect();
+
+      @media (max-width: 1280px) {
+        margin: 8px;
+        padding: 10px 15px;
+        border-radius: 30px;
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: 890px) {
+        margin: 3px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        margin-right: 5px;
+        width: 135px;
+      }
+
+      @media (max-width: 361px) {
+        margin: 3px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        margin-right: 5px;
+        width: 100px;
+      }
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
